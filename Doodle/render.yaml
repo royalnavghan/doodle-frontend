@@ -1,0 +1,28 @@
+# render.yaml
+
+# The name of your service
+name: doodle
+
+# The type of service (in this case, Node.js)
+type: nodejs
+
+# The version of Node.js to use
+nodeVersion: 14
+
+# The build command
+build:
+  # Install dependencies
+  command: npm install
+
+  # Build the app
+  env:
+    - NODE_ENV: production
+    - VITE_WEB_SERVICE_URL: https://backend-doodle.onrender.com
+
+# The start command
+start:
+  # Start the app
+  command: npm run start
+
+# The port on which your app will run
+port: 3000
