@@ -15,6 +15,7 @@ build:
   command: npm install
 
   # Build the app
+  cwd: src/
   env:
     - NODE_ENV: production
     - VITE_WEB_SERVICE_URL: https://backend-doodle.onrender.com
@@ -23,6 +24,7 @@ build:
 start:
   # Start the app
   command: npm run start
+  cwd: src/
 
 # The port on which your app will run
 port: 3000
